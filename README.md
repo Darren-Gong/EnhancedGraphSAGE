@@ -1,6 +1,9 @@
 本项目完成了基于spark的数据处理分析及可视化任务，基于GNN的新闻推荐任务以及认知大模型API接入，并将其部署在网页上。
 采用数据集OpenNewsArchive，27GB，880万篇文章。在项目中文件路径采用了分布式文件系统hdfs。
 项目结构如下：
+
+此外，在第一次运行本系统时，需要取消 pyspark 代码的注释，即在第一次运行时，要在 app.py 中通过调用运行 pyspark 代码，生成前端构建的 js，json文件。后续运行本系统，不需运行 pyspatk 代码，直接运行 app.py 启动 web 即可。
+
 ```markdown
 project
 ├── bert-base-chinese/  # 预训练模型，用于新闻推荐任务
